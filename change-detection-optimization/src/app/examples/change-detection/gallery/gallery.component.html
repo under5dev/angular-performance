@@ -1,0 +1,7 @@
+<h2>Race</h2>
+<p>{{ check() }}</p>
+<div *ngFor="let logo of logos"
+  class="logos-list">
+  <app-angular [angularModel]="logo"></app-angular>
+</div>
+<button (click)="changeColor()">Change color</button>

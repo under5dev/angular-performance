@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let item of data$ | async trackBy: trackByIdAndName">
+    {{ item.id }}  {{ item.name }}
+  </li>
+</ul>

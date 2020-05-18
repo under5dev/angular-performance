@@ -1,0 +1,35 @@
+<div class="container">
+
+  <h2>Loop demo</h2>
+
+  <div class="panel example-form">
+    <mat-form-field class="input-filed">
+      <mat-label>Item Id</mat-label>
+      <input matInput type="number" placeholder="Enter id" value="1" [(ngModel)]="id">
+    </mat-form-field>
+
+    <mat-form-field class="input-field">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Enter name" value="Hydrogen" [(ngModel)]="name">
+    </mat-form-field>
+
+    <button mat-mini-fab color="primary" class="action-button" (click)="update()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <div class="lists">
+    <div class="example">
+      <h2>Loop standard</h2>
+      <app-loop-standard [data]="dataProvider.ExampleData"></app-loop-standard>
+    </div>
+    <div class="example">
+      <h2>Loop async</h2>
+      <app-loop-async [data$]="dataProvider.ImmutableData$" trackBy="true"></app-loop-async>
+    </div>
+    <div class="example">
+      <h2>Loop async trackBy</h2>
+      <app-loop-async-trackby [data$]="dataProvider.ImmutableData$" trackBy="true"></app-loop-async-trackby>
+    </div>
+  </div>
+</div>
