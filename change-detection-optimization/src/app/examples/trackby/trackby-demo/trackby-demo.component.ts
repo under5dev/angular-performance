@@ -21,4 +21,8 @@ export class TrackbyDemoComponent implements OnInit {
     this.dataProvider.updateImmutableData(this.id, this.name);
   }
 
+  check() {
+    console.log('trackby demo component view checked');
+  }
+
 }

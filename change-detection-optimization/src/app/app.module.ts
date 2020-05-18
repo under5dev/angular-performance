@@ -22,6 +22,8 @@ import { ClockComponent } from './examples/advanced-change-detection/clock/clock
 import { ClockManualComponent } from './examples/advanced-change-detection/clock-manual/clock-manual.component';
 import { ClockOutsideZoneComponent } from './examples/advanced-change-detection/clock-outside-zone/clock-outside-zone.component';
 import { ClockDomManipulationComponent } from './examples/advanced-change-detection/clock-dom-manipulation/clock-dom-manipulation.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { ClockDomManipulationComponent } from './examples/advanced-change-detect
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

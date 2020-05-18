@@ -1,5 +1,5 @@
 <div class="container">
-
+{{ check() }}
   <h2>Loop demo</h2>
 
   <div class="panel example-form">
@@ -25,7 +25,7 @@
     </div>
     <div class="example">
       <h2>Loop async</h2>
-      <app-loop-async [data$]="dataProvider.ImmutableData$" trackBy="true"></app-loop-async>
+      <app-loop-async [data$]="dataProvider.ImmutableData$" ></app-loop-async>
     </div>
     <div class="example">
       <h2>Loop async trackBy</h2>

@@ -10,7 +10,7 @@ import {interval, Subscription} from "rxjs";
 export class ClockOutsideZoneComponent implements OnDestroy {
   time: number;
   timeSubscription: Subscription;
-  @ViewChild('clockZone') clock: ElementRef<HTMLParagraphElement>;
+  @ViewChild('clockZone', {static: true}) clock: ElementRef<HTMLParagraphElement>;
 
   constructor(private zone: NgZone) {
   }

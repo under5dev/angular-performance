@@ -10,10 +10,10 @@ import {interval, Subscription} from "rxjs";
 export class ClockDomManipulationComponent implements OnDestroy {
   time: number;
   timeSubscription: Subscription;
-  @ViewChild('clockDom') clock: ElementRef<HTMLParagraphElement>;
+  @ViewChild('clockDom', {static: true}) clock: ElementRef<HTMLParagraphElement>;
 
   constructor(private ref: ChangeDetectorRef) {
-    //this.ref.detach();
+    this.ref.detach();
   }
 
   start() {
@@ -30,6 +30,10 @@ export class ClockDomManipulationComponent implements OnDestroy {
 
   ngOnDestroy() {
     this.timeSubscription.unsubscribe();
+  }
+
+  check() {
+    console.log('clock DOM manipulation component view checked');
   }
 
 }

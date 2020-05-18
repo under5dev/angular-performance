@@ -22,7 +22,7 @@ RUN set -x ; \
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./nginx/mime.types /etc/nginx/mime.types
 COPY ./nginx/site.conf /etc/nginx/conf.d/default.conf
-#COPY --from=builder /app/dist/selfsweatcom /var/www/htdocs
+#COPY --from=builder /app/dist/change-detection-optimization /var/www/htdocs
 COPY ./dist/change-detection-optimization /var/www/htdocs
 
 RUN touch /var/run/nginx.pid && \

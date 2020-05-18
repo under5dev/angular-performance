@@ -27,4 +27,8 @@ export class ClockComponent implements OnDestroy {
     this.timeSubscription.unsubscribe();
   }
 
+  check() {
+    console.log('clock component view checked');
+  }
+
 }

@@ -10,15 +10,15 @@ if (environment.production) {
 }
 
 // Standard bootstrapping code
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+// platformBrowserDynamic().bootstrapModule(AppModule)
+//   .catch(err => console.error(err));
 
 // Bootstrapping code with profiling enabled
-// platformBrowserDynamic().bootstrapModule(AppModule)
-//   .then(moduleRef => {
-//     const applicationRef = moduleRef.injector.get(ApplicationRef);
-//     const componentRef = applicationRef.components[0];
-//     // allows to run `ng.profiler.timeChangeDetection();`
-//     enableDebugTools(componentRef);
-//   })
-//   .catch(err => console.log(err));
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .then(moduleRef => {
+    const applicationRef = moduleRef.injector.get(ApplicationRef);
+    const componentRef = applicationRef.components[0];
+    // allows to run `ng.profiler.timeChangeDetection();`
+    enableDebugTools(componentRef);
+  })
+  .catch(err => console.log(err));
